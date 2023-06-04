@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 450px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .login-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-box label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .login-box input[type="submit"] {
+            background-color: #1877f2;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 3px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .login-box input[type="submit"]:hover {
+            background-color: #1561a9;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 200px;
+            height: auto;
+        }
+        
+        /* Added CSS for the home button */
+        .home-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 45px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 39px;
+        }
+    </style>
+    <script>
+      
+      <!-- This is the function we created for testing as part of lab 3 -->
+        function redirectToWelcomePage() {
+            window.location.href = "welcome.html";
+        }
+        
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="OIG.jpg" alt="Couch Logo">
+        </div>
+
+        <!-- Added home button -->
+        <a href="homepage.html" class="home-button">&#8962;</a>
+
+        <div class="login-box">
+            <h2>Login</h2>
+
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <input type="submit" value="Log In" onclick="redirectToWelcomePage()">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
